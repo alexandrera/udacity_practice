@@ -1,0 +1,15 @@
+from twilio.rest import Client
+
+account_sid = ""
+# Seu Auth Token, encontre em twilio.com/console
+auth_token  = ""
+client = Client(account_sid, auth_token)
+
+call = client.messages.create(
+  
+     to="+000", 
+    from_="+000",
+       body="Lorem ipsum dolor"
+)
+
+print(call.sid)
